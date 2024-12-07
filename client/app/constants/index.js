@@ -1,4 +1,5 @@
 export const API_URL = process.env.API_URL;
+export const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID;
 
 export const SOCKET_URL =
   window.location.host.indexOf('localhost') >= 0

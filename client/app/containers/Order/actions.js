@@ -232,6 +232,15 @@ export const placeOrder = () => {
   };
 };
 
+export const createPaypalOrder = (data, actions) => {
+  return async (dispatch, getState) => {
+    const cart = getState().cart;
+    console.log(cart);
+    const total = getState().cart.cartTotal;
+    return actions.order.create({purchase_units: [{amount: {value: total}}]});
+  };
+}
+
 export const clearOrders = () => {
   return {
     type: CLEAR_ORDERS
